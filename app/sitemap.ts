@@ -1,22 +1,29 @@
 import { MetadataRoute } from 'next';
 
-const BASE_URL = 'https://shopbulds.com';
+const BASE = 'https://shopbuilds.com';
 const locales = ['pt', 'es', 'en'];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = ['', '/privacy', '/terms', '/refund'];
-  const entries: MetadataRoute.Sitemap = [];
+  const now = new Date();
 
-  for (const locale of locales) {
-    for (const route of routes) {
-      entries.push({
-        url: `${BASE_URL}/${locale}${route}`,
-        lastModified: new Date(),
-        changeFrequency: route === '' ? 'weekly' : 'monthly',
-        priority: route === '' ? 1.0 : 0.3,
-      });
-    }
-  }
+  // Main pages — highest priority
+  const mainPages = locales.map((locale) => ({
+    url: `${BASE}/${locale}`,
+    lastModified: now,
+    changeFrequency: 'weekly' as const,
+    priority: locale === 'pt' ? 1.0 : 0.9,
+  }));
 
-  return entries;
+  // Legal pages — lower priority
+  const legalRoutes = ['/privacy', '/terms', '/refund'];
+  const legalPages = locales.flatMap((locale) =>
+    legalRoutes.map((route) => ({
+      url: `${BASE}/${locale}${route}`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.4,
+    }))
+  );
+
+  return [...mainPages, ...legalPages];
 }
