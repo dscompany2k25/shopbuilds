@@ -1,0 +1,124 @@
+{
+  "nav": {
+    "portfolio": "Portfolio",
+    "pricing": "Pricing",
+    "howItWorks": "How It Works",
+    "cta": "See Pricing"
+  },
+  "hero": {
+    "badge": "Delivery guaranteed in 7 days",
+    "headline": "Stop losing customers with pages that don't sell.",
+    "subheadline": "Professional landing pages, delivered in 7 days, with unlimited revisions and full money-back guarantee. No contracts. No surprises.",
+    "cta_primary": "See Pricing",
+    "cta_secondary": "View Portfolio",
+    "proof": "Trusted by 50+ businesses across Europe"
+  },
+  "portfolio": {
+    "badge": "Portfolio",
+    "title": "Pages that convert.",
+    "subtitle": "Every project is built with a single goal: turning visitors into customers.",
+    "items": [
+      { "title": "Modern Restaurant", "category": "Food & Beverage", "desc": "Booking landing page with digital menu and gallery" },
+      { "title": "Fitness Studio", "category": "Health & Wellness", "desc": "Lead capture page for boutique gym" },
+      { "title": "Law Firm", "category": "Legal Services", "desc": "Institutional site with integrated consultation form" },
+      { "title": "Cosmetics Brand", "category": "Beauty & Lifestyle", "desc": "Product launch landing page with email capture" },
+      { "title": "SaaS Startup", "category": "Technology", "desc": "Product page with interactive demo and pricing" },
+      { "title": "Premium Real Estate", "category": "Real Estate", "desc": "Lead generation page for buyers and sellers" }
+    ]
+  },
+  "howItWorks": {
+    "badge": "How It Works",
+    "title": "From briefing to live page,\nin 4 steps.",
+    "steps": [
+      { "num": "01", "title": "Choose your plan", "desc": "Select the package that best fits your project. Pay securely via Stripe." },
+      { "num": "02", "title": "Fill the briefing", "desc": "You receive a simple form with your business details, colors, references and goals." },
+      { "num": "03", "title": "We build your page", "desc": "Our team develops the landing page focused on conversion. You receive the first version within 7 days." },
+      { "num": "04", "title": "Revisions & delivery", "desc": "Request as many changes as you want — unlimited revisions. We only deliver when you are 100% satisfied." }
+    ]
+  },
+  "pricing": {
+    "badge": "Pricing",
+    "title": "Invest in what actually\nbrings customers.",
+    "subtitle": "Transparent pricing. No hidden fees. No surprises.",
+    "popular": "Most popular",
+    "plans": [
+      {
+        "name": "Starter",
+        "price": "49",
+        "desc": "For businesses that need a professional online presence, fast.",
+        "features": ["1 professional landing page", "Up to 5 sections", "Responsive design (mobile + desktop)", "Integrated contact form", "7-day delivery", "Unlimited revisions", "Satisfaction guarantee"],
+        "cta": "Start with Starter"
+      },
+      {
+        "name": "Growth",
+        "price": "99",
+        "desc": "For those who want a page that actively captures leads and drives sales.",
+        "features": ["Everything in Starter", "Up to 10 sections", "Animations & micro-interactions", "Professional copywriting included", "Basic SEO (meta tags, Open Graph)", "Google Analytics + Meta Pixel", "7-day delivery", "Unlimited revisions", "Full money-back guarantee"],
+        "cta": "Start with Growth"
+      },
+      {
+        "name": "Pro",
+        "price": "299",
+        "desc": "For brands that demand technical excellence and measurable results.",
+        "features": ["Everything in Growth", "Unlimited sections", "Advanced SEO (structured data, sitemap)", "Core Web Vitals optimized (90+ PageSpeed)", "CRM & marketing tools integration", "Deploy + domain setup included", "Performance report delivered", "7-day delivery", "Unlimited revisions", "Full money-back guarantee"],
+        "cta": "Start with Pro"
+      }
+    ],
+    "enterprise": {
+      "title": "Need something bigger?",
+      "desc": "Multi-page projects, e-commerce, custom platforms or ongoing management. Talk to us.",
+      "cta": "Talk to the Team",
+      "email": "Lucasbreno@proton.me"
+    }
+  },
+  "testimonials": {
+    "badge": "Testimonials",
+    "title": "Real results,\nfrom real clients.",
+    "items": [
+      { "name": "Mariana Santos", "role": "Marketing Director", "company": "Lisbon, Portugal", "text": "I needed a landing page for my product launch in 5 days. Shop Builds delivered in 4. The conversion rate doubled compared to what we had before. I'll never go back to traditional agencies." },
+      { "name": "João Pinheiro", "role": "Founder", "company": "Madrid, Spain", "text": "I tried three different agencies before. They either took too long or the result was underwhelming. With Shop Builds, we approved the first version. The process was so smooth it felt like we'd been working together for years." },
+      { "name": "Ana Carvalho", "role": "Personal Trainer", "company": "Porto, Portugal", "text": "I spent €1,200 at an agency and waited 3 weeks for something mediocre. Here I paid €99, had the page live in 7 days, and already captured 23 new clients through the form. The ROI was immediate." },
+      { "name": "David Ferreira", "role": "CEO", "company": "Lisbon, Portugal", "text": "The level of detail in the design surprised me. It didn't feel like a generic template — it felt like they'd studied my brand for weeks. The unlimited revisions gave us the freedom to perfect every detail." },
+      { "name": "Sofia Rodrigues", "role": "Leadership Coach", "company": "Braga, Portugal", "text": "I requested eight revisions and never once felt like a burden. Every request was handled with care and speed. The final result was exactly as I imagined — and better. I recommend them without hesitation." }
+    ]
+  },
+  "guarantee": {
+    "badge": "Guarantee",
+    "title": "Work with zero risk.\nAlways.",
+    "desc": "If you're not satisfied with the first version of your page, we refund 100% of the amount paid. No questions, no hassle. We believe in our work — and we want you to believe in it too.",
+    "items": [
+      { "title": "Full Refund", "desc": "Complete money-back guarantee if you're not satisfied." },
+      { "title": "Unlimited Revisions", "desc": "We don't stop until the page is exactly how you want it." },
+      { "title": "7-Day Delivery", "desc": "We commit to the deadline. Always." },
+      { "title": "Direct Support", "desc": "You talk directly to the team. No middlemen." }
+    ]
+  },
+  "faq": {
+    "badge": "FAQ",
+    "title": "Frequently asked questions.",
+    "items": [
+      { "q": "What exactly do I receive after payment?", "a": "Once payment is confirmed, we send you a briefing form. Based on your answers, we build your landing page from scratch — design, development and (on Growth and Pro plans) copywriting included." },
+      { "q": "How is the landing page delivered?", "a": "We deliver the complete files (HTML/CSS/JS) and, on the Pro plan, deploy directly to your server or Vercel. On Starter and Growth plans, you can request deployment for a small additional fee." },
+      { "q": "What does unlimited revisions mean?", "a": "It means you can request any changes you want — colors, text, layout, sections — at no extra cost. We only close the project when you confirm you're 100% satisfied." },
+      { "q": "What if I don't like the result?", "a": "Our full money-back guarantee applies. Just send an email to Lucasbreno@proton.me and we refund the full amount, no questions asked." },
+      { "q": "Do you need access to my domain?", "a": "Only on the Pro plan, where deployment is included. On other plans, we deliver the files and you (or your developer) upload them to whichever server you prefer." },
+      { "q": "Do you work with clients outside Portugal?", "a": "Yes. We work with clients across Europe and beyond. Communication can be in Portuguese, Spanish or English." },
+      { "q": "What is the difference between plans?", "a": "Essentially, the number of sections, inclusion of copywriting, SEO level and technical extras. The Growth plan is our best-seller for balancing quality and cost." },
+      { "q": "How does payment work?", "a": "Payment is made securely via Stripe, by credit or debit card. You receive a receipt immediately by email." }
+    ]
+  },
+  "finalCta": {
+    "title": "Your next landing page\nis one click away.",
+    "desc": "Over 50 businesses already trust Shop Builds. Join them.",
+    "cta": "Get Started Now",
+    "sub": "Full money-back guarantee. No contracts. 7-day delivery."
+  },
+  "footer": {
+    "tagline": "Landing pages that convert.",
+    "links": { "title": "Links", "portfolio": "Portfolio", "pricing": "Pricing", "howItWorks": "How It Works" },
+    "legal": { "title": "Legal", "privacy": "Privacy Policy", "terms": "Terms of Service", "refund": "Refund Policy" },
+    "contact": { "title": "Contact", "name": "Lucas Breno Ferreira da Costa", "nif": "VAT: 315027371" },
+    "copyright": "Shop Builds. All rights reserved.",
+    "address": "Estrada de Mata Burros, Apt. 1, Quinta do Vale Bom, 2050-378"
+  }
+}

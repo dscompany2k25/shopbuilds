@@ -1,0 +1,256 @@
+{
+  "nav": {
+    "portfolio": "Portfólio",
+    "pricing": "Preços",
+    "howItWorks": "Como Funciona",
+    "cta": "Ver Preços"
+  },
+  "hero": {
+    "badge": "Entrega garantida em 7 dias",
+    "headline": "Pára de perder clientes com páginas que não vendem.",
+    "subheadline": "Landing pages profissionais, entregues em 7 dias, com revisões ilimitadas e garantia de reembolso total. Sem contratos. Sem surpresas.",
+    "cta_primary": "Ver Preços",
+    "cta_secondary": "Ver Portfólio",
+    "proof": "Mais de 50 negócios confiam na Shop Builds"
+  },
+  "portfolio": {
+    "badge": "Portfólio",
+    "title": "Páginas que convertem.",
+    "subtitle": "Cada projecto é construído com foco num único objetivo: transformar visitantes em clientes.",
+    "items": [
+      {
+        "title": "Restaurante Moderno",
+        "category": "Restauração",
+        "desc": "Landing page para reservas com menu digital e galeria"
+      },
+      {
+        "title": "Studio Fitness",
+        "category": "Saúde & Bem-estar",
+        "desc": "Página de captação de leads para ginásio boutique"
+      },
+      {
+        "title": "Escritório de Advocacia",
+        "category": "Serviços Jurídicos",
+        "desc": "Site institucional com formulário de consulta integrado"
+      },
+      {
+        "title": "Marca de Cosméticos",
+        "category": "Beleza & Lifestyle",
+        "desc": "Landing page de lançamento de produto com email capture"
+      },
+      {
+        "title": "Startup SaaS",
+        "category": "Tecnologia",
+        "desc": "Página de produto com demo interactiva e pricing"
+      },
+      {
+        "title": "Imobiliária Premium",
+        "category": "Imobiliário",
+        "desc": "Landing page de captação de compradores e vendedores"
+      }
+    ]
+  },
+  "howItWorks": {
+    "badge": "Como Funciona",
+    "title": "Do briefing à página publicada,\nem 4 passos.",
+    "steps": [
+      {
+        "num": "01",
+        "title": "Escolhe o teu plano",
+        "desc": "Seleciona o pacote que melhor se adapta ao teu projecto. Paga com segurança via Stripe."
+      },
+      {
+        "num": "02",
+        "title": "Preenche o briefing",
+        "desc": "Recebemos um formulário simples com os detalhes do teu negócio, cores, referências e objetivos."
+      },
+      {
+        "num": "03",
+        "title": "Construímos a tua página",
+        "desc": "A nossa equipa desenvolve a landing page com foco em conversão. Recebes a primeira versão em até 7 dias."
+      },
+      {
+        "num": "04",
+        "title": "Revisões e entrega",
+        "desc": "Pedes todas as alterações que quiseres — revisões ilimitadas. Só entregamos quando estiveres 100% satisfeito."
+      }
+    ]
+  },
+  "pricing": {
+    "badge": "Preços",
+    "title": "Investe no que realmente\ntraz clientes.",
+    "subtitle": "Preços transparentes. Sem custos escondidos. Sem surpresas.",
+    "popular": "Mais popular",
+    "plans": [
+      {
+        "name": "Starter",
+        "price": "49",
+        "desc": "Para negócios que precisam de uma presença online profissional e rápida.",
+        "features": [
+          "1 landing page profissional",
+          "Até 5 secções",
+          "Design responsivo (mobile + desktop)",
+          "Formulário de contacto integrado",
+          "Entrega em 7 dias",
+          "Revisões ilimitadas",
+          "Garantia de satisfação"
+        ],
+        "cta": "Começar com Starter"
+      },
+      {
+        "name": "Growth",
+        "price": "99",
+        "desc": "Para quem quer uma página que capture leads e impulsione vendas activamente.",
+        "features": [
+          "Tudo do Starter",
+          "Até 10 secções",
+          "Animações e micro-interações",
+          "Copywriting profissional incluído",
+          "SEO básico (meta tags, Open Graph)",
+          "Google Analytics + Meta Pixel",
+          "Entrega em 7 dias",
+          "Revisões ilimitadas",
+          "Garantia de reembolso total"
+        ],
+        "cta": "Começar com Growth"
+      },
+      {
+        "name": "Pro",
+        "price": "299",
+        "desc": "Para marcas que exigem excelência técnica e resultados mensuráveis.",
+        "features": [
+          "Tudo do Growth",
+          "Secções sem limite",
+          "SEO avançado (structured data, sitemap)",
+          "Core Web Vitals optimizados (90+ PageSpeed)",
+          "Integração com CRM e ferramentas de marketing",
+          "Deploy + configuração de domínio incluídos",
+          "Relatório de performance entregue",
+          "Entrega em 7 dias",
+          "Revisões ilimitadas",
+          "Garantia de reembolso total"
+        ],
+        "cta": "Começar com Pro"
+      }
+    ],
+    "enterprise": {
+      "title": "Precisas de algo maior?",
+      "desc": "Projectos multi-página, e-commerce, plataformas personalizadas ou gestão contínua. Fala connosco.",
+      "cta": "Falar com a Equipa",
+      "email": "Lucasbreno@proton.me"
+    }
+  },
+  "testimonials": {
+    "badge": "Testemunhos",
+    "title": "Resultados reais,\nde clientes reais.",
+    "items": [
+      {
+        "name": "Mariana Santos",
+        "role": "Directora de Marketing",
+        "company": "Lisboa, Portugal",
+        "text": "Precisava de uma landing page para o lançamento do meu produto em 5 dias. A Shop Builds entregou em 4. A taxa de conversão duplicou face à página que tínhamos antes. Nunca mais trabalho com agências tradicionais."
+      },
+      {
+        "name": "João Pinheiro",
+        "role": "Fundador",
+        "company": "Madrid, Espanha",
+        "text": "Tentei três agências diferentes antes. Ou demoravam demasiado, ou o resultado ficava aquém. Com a Shop Builds, aprovámos à primeira versão. O processo foi tão simples que parece que trabalhamos juntos há anos."
+      },
+      {
+        "name": "Ana Carvalho",
+        "role": "Personal Trainer",
+        "company": "Porto, Portugal",
+        "text": "Gastei 1.200€ numa agência e fiquei à espera 3 semanas por algo medíocre. Aqui paguei 99€, em 7 dias tinha a página no ar, e já captei mais de 23 novos clientes pelo formulário. O ROI foi imediato."
+      },
+      {
+        "name": "David Ferreira",
+        "role": "CEO",
+        "company": "Lisboa, Portugal",
+        "text": "O nível de detalhe no design surpreendeu-me. Não pareceu um template genérico — pareceu que estudaram a minha marca durante semanas. As revisões ilimitadas deram-nos a liberdade de afinar cada pormenor."
+      },
+      {
+        "name": "Sofia Rodrigues",
+        "role": "Coach de Liderança",
+        "company": "Braga, Portugal",
+        "text": "Pedi oito revisões e nunca senti que estava a incomodar. Cada pedido foi tratado com atenção e rapidez. O resultado final ficou exactamente como imaginei — e melhor. Recomendo sem hesitar."
+      }
+    ]
+  },
+  "guarantee": {
+    "badge": "Garantia",
+    "title": "Trabalhas sem risco.\nSempre.",
+    "desc": "Se não ficares satisfeito com a primeira versão da tua página, devolvemos 100% do valor pago. Sem perguntas, sem burocracia. Acreditamos no nosso trabalho — e queremos que tu também acredites.",
+    "items": [
+      { "title": "Reembolso Total", "desc": "Garantia de devolução completa do pagamento se não ficares satisfeito." },
+      { "title": "Revisões Ilimitadas", "desc": "Não paramos até a página estar exactamente como queres." },
+      { "title": "Entrega em 7 Dias", "desc": "Comprometemo-nos com o prazo. Sempre." },
+      { "title": "Suporte Directo", "desc": "Falas directamente com a equipa. Sem intermediários." }
+    ]
+  },
+  "faq": {
+    "badge": "FAQ",
+    "title": "Perguntas frequentes.",
+    "items": [
+      {
+        "q": "O que recebo exactamente após o pagamento?",
+        "a": "Assim que o pagamento for confirmado, enviamos-te um formulário de briefing. Com base nas tuas respostas, construímos a tua landing page do zero — design, desenvolvimento e (nos planos Growth e Pro) copywriting incluídos."
+      },
+      {
+        "q": "Como é feita a entrega da landing page?",
+        "a": "Entregamos os ficheiros completos (HTML/CSS/JS) e, no plano Pro, fazemos o deploy directamente para o teu servidor ou Vercel. Nos planos Starter e Growth, podes pedir o deploy mediante um custo adicional reduzido."
+      },
+      {
+        "q": "O que são revisões ilimitadas?",
+        "a": "Significa que podes pedir todas as alterações que quiseres — cores, textos, layout, secções — sem custos adicionais. Só consideramos o projecto encerrado quando confirmares que estás 100% satisfeito."
+      },
+      {
+        "q": "E se não gostar do resultado?",
+        "a": "Aplica a nossa garantia de reembolso total. Basta enviar um email para Lucasbreno@proton.me e devolvemos o valor na íntegra, sem questões."
+      },
+      {
+        "q": "Precisam de acesso ao meu domínio?",
+        "a": "Apenas no plano Pro, onde o deploy está incluído. Nos outros planos, entregamos os ficheiros e tu (ou o teu programador) faz o upload para o servidor que quiseres."
+      },
+      {
+        "q": "Trabalham com clientes fora de Portugal?",
+        "a": "Sim. Trabalhamos com clientes em toda a Europa e além. A comunicação pode ser feita em português, espanhol ou inglês."
+      },
+      {
+        "q": "Qual é a diferença entre os planos?",
+        "a": "Essencialmente, o número de secções, a inclusão de copywriting, o nível de SEO e os extras técnicos. O plano Growth é o nosso mais vendido por equilibrar qualidade e custo. O Pro é ideal para quem quer o pacote completo."
+      },
+      {
+        "q": "Como funciona o pagamento?",
+        "a": "O pagamento é feito de forma segura via Stripe, com cartão de crédito ou débito. Recebas imediatamente o recibo por email."
+      }
+    ]
+  },
+  "finalCta": {
+    "title": "A tua próxima landing page\nestá a um clique.",
+    "desc": "Mais de 50 negócios já confiaram na Shop Builds. Junta-te a eles.",
+    "cta": "Começar Agora",
+    "sub": "Garantia de reembolso total. Sem contratos. Entrega em 7 dias."
+  },
+  "footer": {
+    "tagline": "Landing pages que convertem.",
+    "links": {
+      "title": "Links",
+      "portfolio": "Portfólio",
+      "pricing": "Preços",
+      "howItWorks": "Como Funciona"
+    },
+    "legal": {
+      "title": "Legal",
+      "privacy": "Política de Privacidade",
+      "terms": "Termos de Serviço",
+      "refund": "Política de Reembolso"
+    },
+    "contact": {
+      "title": "Contacto",
+      "name": "Lucas Breno Ferreira da Costa",
+      "nif": "NIF: 315027371"
+    },
+    "copyright": "Shop Builds. Todos os direitos reservados.",
+    "address": "Estrada de Mata Burros, Apt. 1, Quinta do Vale Bom, 2050-378"
+  }
+}
