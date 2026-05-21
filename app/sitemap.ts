@@ -15,7 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   // Legal pages — lower priority
-  const legalRoutes = ['/privacy', '/terms', '/refund'];
+  const legalRoutes = ['/privacy', '/terms', '/refund', '/cookies'];
   const legalPages = locales.flatMap((locale) =>
     legalRoutes.map((route) => ({
       url: `${BASE}/${locale}${route}`,

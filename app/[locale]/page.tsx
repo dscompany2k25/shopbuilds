@@ -10,6 +10,7 @@ import Guarantee from '@/components/Guarantee';
 import FAQ from '@/components/FAQ';
 import FinalCTA from '@/components/FinalCTA';
 import Footer from '@/components/Footer';
+import CookieBanner from '@/components/CookieBanner';
 
 export default function Home({ params: { locale } }: { params: { locale: string } }) {
   setRequestLocale(locale);
@@ -26,6 +27,7 @@ export default function Home({ params: { locale } }: { params: { locale: string 
       <FAQ />
       <FinalCTA />
       <Footer />
+      <CookieBanner />
     </main>
   );
 }
