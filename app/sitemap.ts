@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next';
 
-const BASE = 'https://shopbuilds.com';
+const BASE = 'https://shopbulds.com';
 const locales = ['pt', 'es', 'en'];
 
 export default function sitemap(): MetadataRoute.Sitemap {

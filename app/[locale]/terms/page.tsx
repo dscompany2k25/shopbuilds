@@ -5,7 +5,7 @@ const t: Record<string, { back: string; title: string; updated: string; sections
   pt: {
     back: '← Voltar', title: 'Termos de Serviço', updated: 'Última actualização: Maio 2026',
     sections: [
-      { h: '1. Partes', b: 'O presente contrato é celebrado entre Lucas Breno Ferreira da Costa, NIF 315027371 ("Prestador"), e o cliente ("Cliente"), adquirente dos serviços de criação de landing pages através de shopbuilds.com.' },
+      { h: '1. Partes', b: 'O presente contrato é celebrado entre Lucas Breno Ferreira da Costa, NIF 315027371 ("Prestador"), e o cliente ("Cliente"), adquirente dos serviços de criação de landing pages através de shopbulds.com.' },
       { h: '2. Descrição dos Serviços', b: 'O Prestador oferece serviços de criação de landing pages profissionais. Os planos disponíveis e respectivos preços constam da página de preços do website. Cada plano inclui as funcionalidades descritas na página de preços no momento da compra.' },
       { h: '3. Pagamento', b: 'O pagamento é efectuado antecipadamente, de forma segura através da Stripe. O Cliente recebe recibo por e-mail imediatamente após o pagamento. Os preços incluem IVA quando aplicável.' },
       { h: '4. Briefing e Processo de Trabalho', b: 'Após confirmação do pagamento, o Prestador envia ao Cliente um formulário de briefing. O Cliente dispõe de 30 dias para submeter o briefing. O prazo de entrega de 7 dias conta a partir da recepção do briefing completo.' },
@@ -21,7 +21,7 @@ const t: Record<string, { back: string; title: string; updated: string; sections
   es: {
     back: '← Volver', title: 'Términos de Servicio', updated: 'Última actualización: Mayo 2026',
     sections: [
-      { h: '1. Partes', b: 'Este contrato se celebra entre Lucas Breno Ferreira da Costa, NIF 315027371 ("Proveedor"), y el cliente ("Cliente"), adquirente de los servicios de creación de landing pages a través de shopbuilds.com.' },
+      { h: '1. Partes', b: 'Este contrato se celebra entre Lucas Breno Ferreira da Costa, NIF 315027371 ("Proveedor"), y el cliente ("Cliente"), adquirente de los servicios de creación de landing pages a través de shopbulds.com.' },
       { h: '2. Descripción de los Servicios', b: 'El Proveedor ofrece servicios de creación de landing pages profesionales. Los planes disponibles y sus precios se encuentran en la página de precios del sitio web.' },
       { h: '3. Pago', b: 'El pago se realiza por adelantado de forma segura a través de Stripe. El Cliente recibe un recibo por correo electrónico inmediatamente después del pago.' },
       { h: '4. Briefing y Proceso de Trabajo', b: 'Tras la confirmación del pago, el Proveedor envía al Cliente un formulario de briefing. El plazo de entrega de 7 días se cuenta desde la recepción del briefing completo.' },
@@ -37,7 +37,7 @@ const t: Record<string, { back: string; title: string; updated: string; sections
   en: {
     back: '← Back', title: 'Terms of Service', updated: 'Last updated: May 2026',
     sections: [
-      { h: '1. Parties', b: 'This agreement is entered into between Lucas Breno Ferreira da Costa, VAT 315027371 ("Provider"), and the client ("Client"), purchaser of landing page creation services through shopbuilds.com.' },
+      { h: '1. Parties', b: 'This agreement is entered into between Lucas Breno Ferreira da Costa, VAT 315027371 ("Provider"), and the client ("Client"), purchaser of landing page creation services through shopbulds.com.' },
       { h: '2. Service Description', b: 'The Provider offers professional landing page creation services. Available plans and their prices are listed on the website pricing page at the time of purchase.' },
       { h: '3. Payment', b: 'Payment is made in advance, securely through Stripe. The Client receives a receipt by email immediately after payment. Prices include VAT where applicable.' },
       { h: '4. Briefing and Workflow', b: 'After payment confirmation, the Provider sends the Client a briefing form. The Client has 30 days to submit the briefing. The 7-day delivery period starts from receipt of the completed briefing.' },

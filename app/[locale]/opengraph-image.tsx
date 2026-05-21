@@ -132,7 +132,7 @@ export default async function Image({ params }: { params: { locale: string } }) 
               background: '#22c55e',
             }}
           />
-          shopbuilds.com
+          shopbulds.com
         </div>
       </div>
     ),

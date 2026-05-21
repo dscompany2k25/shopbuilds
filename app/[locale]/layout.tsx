@@ -3,7 +3,7 @@ import { getMessages, setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
 import { locales } from '@/i18n';
 
-const BASE = 'https://shopbuilds.com';
+const BASE = 'https://shopbulds.com';
 
 type Props = {
   children: React.ReactNode;

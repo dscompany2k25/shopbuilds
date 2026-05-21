@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/_next/'],
       },
     ],
-    sitemap: 'https://shopbuilds.com/sitemap.xml',
-    host: 'https://shopbuilds.com',
+    sitemap: 'https://shopbulds.com/sitemap.xml',
+    host: 'https://shopbulds.com',
   };
 }

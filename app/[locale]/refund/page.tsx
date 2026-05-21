@@ -6,7 +6,7 @@ const t: Record<string, { back: string; title: string; updated: string; guarante
     back: '← Voltar', title: 'Política de Reembolso', updated: 'Última actualização: Maio 2026',
     guarantee: 'Garantia de Satisfação Total — Reembolso de 100% se não ficares satisfeito.',
     sections: [
-      { h: 'Âmbito de Aplicação', b: 'Esta política aplica-se a todos os serviços adquiridos em shopbuilds.com por Lucas Breno Ferreira da Costa (NIF 315027371).' },
+      { h: 'Âmbito de Aplicação', b: 'Esta política aplica-se a todos os serviços adquiridos em shopbulds.com por Lucas Breno Ferreira da Costa (NIF 315027371).' },
       { h: 'Direito de Reembolso Total', b: 'Garantimos reembolso total do valor pago se não ficares satisfeito com a primeira versão da tua landing page. O pedido deve ser efectuado por e-mail (Lucasbreno@proton.me) dentro de 14 dias após a entrega da primeira versão.' },
       { h: 'Cancelamento antes do Início do Trabalho', b: 'Se cancelares antes de submeter o briefing, reembolsamos 100% do valor pago, sem questões. O reembolso é processado em 5-10 dias úteis, para o método de pagamento original.' },
       { h: 'Cancelamento após Início do Trabalho', b: 'Após submissão do briefing e início do desenvolvimento, aplica-se a garantia de satisfação: se a primeira entrega não corresponder às expectativas, reembolsamos integralmente.' },
@@ -20,7 +20,7 @@ const t: Record<string, { back: string; title: string; updated: string; guarante
     back: '← Volver', title: 'Política de Reembolso', updated: 'Última actualización: Mayo 2026',
     guarantee: 'Garantía de Satisfacción Total — Reembolso del 100% si no quedas satisfecho.',
     sections: [
-      { h: 'Ámbito de Aplicación', b: 'Esta política se aplica a todos los servicios adquiridos en shopbuilds.com por Lucas Breno Ferreira da Costa (NIF 315027371).' },
+      { h: 'Ámbito de Aplicación', b: 'Esta política se aplica a todos los servicios adquiridos en shopbulds.com por Lucas Breno Ferreira da Costa (NIF 315027371).' },
       { h: 'Derecho de Reembolso Total', b: 'Garantizamos el reembolso total del importe pagado si no quedas satisfecho con la primera versión de tu landing page. La solicitud debe realizarse por email (Lucasbreno@proton.me) dentro de los 14 días siguientes a la entrega.' },
       { h: 'Cancelación antes del Inicio', b: 'Si cancelas antes de enviar el briefing, reembolsamos el 100% del importe pagado, sin preguntas. El reembolso se procesa en 5-10 días hábiles.' },
       { h: 'Cancelación tras el Inicio', b: 'Tras el envío del briefing e inicio del desarrollo, se aplica la garantía de satisfacción: si la primera entrega no cumple las expectativas, reembolsamos íntegramente.' },
@@ -33,7 +33,7 @@ const t: Record<string, { back: string; title: string; updated: string; guarante
     back: '← Back', title: 'Refund Policy', updated: 'Last updated: May 2026',
     guarantee: '100% Money-Back Guarantee — Full refund if you are not satisfied.',
     sections: [
-      { h: 'Scope', b: 'This policy applies to all services purchased at shopbuilds.com by Lucas Breno Ferreira da Costa (VAT 315027371).' },
+      { h: 'Scope', b: 'This policy applies to all services purchased at shopbulds.com by Lucas Breno Ferreira da Costa (VAT 315027371).' },
       { h: 'Full Refund Guarantee', b: "We guarantee a full refund if you are not satisfied with the first version of your landing page. The request must be made by email to Lucasbreno@proton.me within 14 days of the first version's delivery." },
       { h: 'Cancellation Before Work Starts', b: 'If you cancel before submitting the briefing, we refund 100% of the amount paid, no questions asked. The refund is processed within 5–10 business days to the original payment method.' },
       { h: 'Cancellation After Work Starts', b: 'After briefing submission and development start, the satisfaction guarantee applies: if the first delivery does not meet your expectations, we will refund in full.' },
