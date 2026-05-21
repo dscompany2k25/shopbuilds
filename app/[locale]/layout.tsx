@@ -12,9 +12,9 @@ type Props = {
 
 export async function generateMetadata({ params: { locale } }: Props): Promise<Metadata> {
   const titles: Record<string, string> = {
-    pt: 'Shop Builds — Landing Pages que Convertem | Entrega em 7 Dias',
-    es: 'Shop Builds — Landing Pages que Convierten | Entrega en 7 Días',
-    en: 'Shop Builds — Landing Pages that Convert | Delivered in 7 Days',
+    pt: 'Shop Bulds — Landing Pages que Convertem | Entrega em 7 Dias',
+    es: 'Shop Bulds — Landing Pages que Convierten | Entrega en 7 Días',
+    en: 'Shop Bulds — Landing Pages that Convert | Delivered in 7 Days',
   };
 
   const descriptions: Record<string, string> = {
@@ -44,7 +44,7 @@ export async function generateMetadata({ params: { locale } }: Props): Promise<M
       title: titles[locale] ?? titles.pt,
       description: descriptions[locale] ?? descriptions.pt,
       url: `${BASE}/${locale}`,
-      siteName: 'Shop Builds',
+      siteName: 'Shop Bulds',
       locale: locale === 'pt' ? 'pt_PT' : locale === 'es' ? 'es_ES' : 'en_US',
       type: 'website',
       images: [
@@ -52,7 +52,7 @@ export async function generateMetadata({ params: { locale } }: Props): Promise<M
           url: ogImage,
           width: 1200,
           height: 630,
-          alt: 'Shop Builds — Landing Pages Profissionais',
+          alt: 'Shop Bulds — Landing Pages Profissionais',
         },
       ],
     },
@@ -97,7 +97,7 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
   '@id': `${BASE}/#business`,
-  name: 'Shop Builds',
+  name: 'Shop Bulds',
   url: BASE,
   logo: `${BASE}/favicon.svg`,
   image: `${BASE}/og-image.png`,

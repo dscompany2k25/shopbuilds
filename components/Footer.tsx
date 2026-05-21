@@ -35,7 +35,7 @@ const copy: Record<string, {
     },
     contact: { title: 'Contacto' },
     payment: 'Pagamentos processados com segurança via',
-    copyright: 'Shop Builds. Todos os direitos reservados.',
+    copyright: 'Shop Bulds. Todos os direitos reservados.',
     address: 'Estrada de Mata Burros, Apt. 1, Quinta do Vale Bom, 2050-378, Portugal',
     vat: 'NIF: 315027371',
     dispute: 'Resolução de Litígios (UE)',
@@ -62,7 +62,7 @@ const copy: Record<string, {
     },
     contact: { title: 'Contacto' },
     payment: 'Pagos procesados de forma segura por',
-    copyright: 'Shop Builds. Todos los derechos reservados.',
+    copyright: 'Shop Bulds. Todos los derechos reservados.',
     address: 'Estrada de Mata Burros, Apt. 1, Quinta do Vale Bom, 2050-378, Portugal',
     vat: 'NIF: 315027371',
     dispute: 'Resolución de Litigios (UE)',
@@ -89,7 +89,7 @@ const copy: Record<string, {
     },
     contact: { title: 'Contact' },
     payment: 'Payments securely processed by',
-    copyright: 'Shop Builds. All rights reserved.',
+    copyright: 'Shop Bulds. All rights reserved.',
     address: 'Estrada de Mata Burros, Apt. 1, Quinta do Vale Bom, 2050-378, Portugal',
     vat: 'VAT: 315027371',
     dispute: 'EU Online Dispute Resolution',
@@ -105,29 +105,6 @@ function StripeLogo() {
   );
 }
 
-function CardIcons() {
-  return (
-    <div className="flex items-center gap-2">
-      {/* Visa */}
-      <div className="bg-white/5 border border-white/10 rounded px-2 py-1">
-        <span className="text-[9px] font-bold text-[#888] tracking-wider">VISA</span>
-      </div>
-      {/* Mastercard */}
-      <div className="bg-white/5 border border-white/10 rounded px-2 py-1 flex items-center gap-0.5">
-        <div className="w-3 h-3 rounded-full bg-[#eb001b] opacity-80" />
-        <div className="w-3 h-3 rounded-full bg-[#f79e1b] opacity-80 -ml-1" />
-      </div>
-      {/* MB WAY */}
-      <div className="bg-white/5 border border-white/10 rounded px-2 py-1">
-        <span className="text-[9px] font-bold text-[#888] tracking-wide">MB WAY</span>
-      </div>
-      {/* Multibanco */}
-      <div className="bg-white/5 border border-white/10 rounded px-2 py-1">
-        <span className="text-[9px] font-bold text-[#888] tracking-wide">MB</span>
-      </div>
-    </div>
-  );
-}
 
 export default function Footer() {
   const locale = useLocale();
@@ -147,21 +124,18 @@ export default function Footer() {
                 <span className="font-display font-extrabold text-black text-xs leading-none">SB</span>
               </div>
               <span className="font-display font-bold text-[var(--text-1)] text-base tracking-tight">
-                Shop<span className="text-[#555]">Builds</span>
+                Shop<span className="text-[#555]">Bulds</span>
               </span>
             </div>
             <p className="text-[#444] text-xs leading-relaxed mb-5">{c.tagline}</p>
 
-            {/* Stripe + cards */}
-            <div className="space-y-2">
-              <div className="flex items-center gap-2">
-                <svg width="12" height="12" fill="none" stroke="#555" strokeWidth="2" viewBox="0 0 24 24">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-                <span className="text-[#555] text-[10px]">{c.payment}</span>
-                <StripeLogo />
-              </div>
-              <CardIcons />
+            {/* Stripe badge */}
+            <div className="flex items-center gap-2 mt-1">
+              <svg width="12" height="12" fill="none" stroke="#555" strokeWidth="2" viewBox="0 0 24 24">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+              <span className="text-[#555] text-[10px]">{c.payment}</span>
+              <StripeLogo />
             </div>
           </div>
 

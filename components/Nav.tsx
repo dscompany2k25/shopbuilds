@@ -34,7 +34,7 @@ export default function Nav() {
               <span className="font-display font-extrabold text-black text-xs leading-none tracking-tight">SB</span>
             </div>
             <span className="font-display font-bold text-[var(--text-1)] text-sm tracking-tight hidden sm:block">
-              Shop<span className="text-[var(--text-2)]">Builds</span>
+              Shop<span className="text-[var(--text-2)]">Bulds</span>
             </span>
           </a>
 

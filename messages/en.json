@@ -75,8 +75,8 @@
     "badge": "Testimonials",
     "title": "Real results,\nfrom real clients.",
     "items": [
-      { "name": "Mariana Santos", "role": "Marketing Director", "company": "Lisbon, Portugal", "text": "I needed a landing page for my product launch in 5 days. Shop Builds delivered in 4. The conversion rate doubled compared to what we had before. I'll never go back to traditional agencies." },
-      { "name": "João Pinheiro", "role": "Founder", "company": "Madrid, Spain", "text": "I tried three different agencies before. They either took too long or the result was underwhelming. With Shop Builds, we approved the first version. The process was so smooth it felt like we'd been working together for years." },
+      { "name": "Mariana Santos", "role": "Marketing Director", "company": "Lisbon, Portugal", "text": "I needed a landing page for my product launch in 5 days. Shop Bulds delivered in 4. The conversion rate doubled compared to what we had before. I'll never go back to traditional agencies." },
+      { "name": "João Pinheiro", "role": "Founder", "company": "Madrid, Spain", "text": "I tried three different agencies before. They either took too long or the result was underwhelming. With Shop Bulds, we approved the first version. The process was so smooth it felt like we'd been working together for years." },
       { "name": "Ana Carvalho", "role": "Personal Trainer", "company": "Porto, Portugal", "text": "I spent €1,200 at an agency and waited 3 weeks for something mediocre. Here I paid €99, had the page live in 7 days, and already captured 23 new clients through the form. The ROI was immediate." },
       { "name": "David Ferreira", "role": "CEO", "company": "Lisbon, Portugal", "text": "The level of detail in the design surprised me. It didn't feel like a generic template — it felt like they'd studied my brand for weeks. The unlimited revisions gave us the freedom to perfect every detail." },
       { "name": "Sofia Rodrigues", "role": "Leadership Coach", "company": "Braga, Portugal", "text": "I requested eight revisions and never once felt like a burden. Every request was handled with care and speed. The final result was exactly as I imagined — and better. I recommend them without hesitation." }
@@ -109,7 +109,7 @@
   },
   "finalCta": {
     "title": "Your next landing page\nis one click away.",
-    "desc": "Over 50 businesses already trust Shop Builds. Join them.",
+    "desc": "Over 50 businesses already trust Shop Bulds. Join them.",
     "cta": "Get Started Now",
     "sub": "Full money-back guarantee. No contracts. 7-day delivery."
   },
@@ -118,7 +118,7 @@
     "links": { "title": "Links", "portfolio": "Portfolio", "pricing": "Pricing", "howItWorks": "How It Works" },
     "legal": { "title": "Legal", "privacy": "Privacy Policy", "terms": "Terms of Service", "refund": "Refund Policy" },
     "contact": { "title": "Contact", "name": "Lucas Breno Ferreira da Costa", "nif": "VAT: 315027371" },
-    "copyright": "Shop Builds. All rights reserved.",
+    "copyright": "Shop Bulds. All rights reserved.",
     "address": "Estrada de Mata Burros, Apt. 1, Quinta do Vale Bom, 2050-378"
   }
 }

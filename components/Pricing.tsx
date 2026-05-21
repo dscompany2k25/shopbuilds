@@ -166,7 +166,7 @@ export default function Pricing() {
             <p className="text-[#666] text-sm max-w-xl">{enterprise.desc}</p>
           </div>
           <a
-            href={`mailto:${enterprise.email}?subject=Projecto%20Enterprise%20-%20Shop%20Builds`}
+            href={`mailto:${enterprise.email}?subject=Projecto%20Enterprise%20-%20Shop%20Bulds`}
             className="flex-shrink-0 btn-secondary-bg text-[var(--color-secondary-cta-text)] hover:scale-[0.97] px-6 py-3 text-sm font-medium rounded-full transition-transform duration-200 whitespace-nowrap"
           >
             {enterprise.cta} →

@@ -54,7 +54,7 @@ export default function RefundPage({ params }: { params: { locale: string } }) {
         <Link href={`/${locale}`} className="text-[#444] hover:text-white text-xs transition-colors mb-12 inline-block">{c.back}</Link>
         <div className="flex items-center gap-3 mb-10">
           <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center"><span className="font-bold text-black text-xs">SB</span></div>
-          <span className="font-bold text-white text-base">ShopBuilds</span>
+          <span className="font-bold text-white text-base">ShopBulds</span>
         </div>
         <h1 className="font-display font-extrabold text-white text-3xl mb-2">{c.title}</h1>
         <p className="text-[#444] text-xs mb-6">{c.updated}</p>

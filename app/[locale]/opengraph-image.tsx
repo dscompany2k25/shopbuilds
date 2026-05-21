@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og';
 
 export const runtime = 'edge';
-export const alt = 'Shop Builds — Landing Pages Profissionais';
+export const alt = 'Shop Bulds — Landing Pages Profissionais';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -86,7 +86,7 @@ export default async function Image({ params }: { params: { locale: string } }) 
             SB
           </div>
           <span style={{ color: '#f0f0f0', fontSize: '20px', fontWeight: 700 }}>
-            Shop<span style={{ color: '#666' }}>Builds</span>
+            Shop<span style={{ color: '#666' }}>Bulds</span>
           </span>
         </div>
 

@@ -11,7 +11,7 @@
     "subheadline": "Landing pages profesionales, entregadas en 7 días, con revisiones ilimitadas y garantía de reembolso total. Sin contratos. Sin sorpresas.",
     "cta_primary": "Ver Precios",
     "cta_secondary": "Ver Portafolio",
-    "proof": "Más de 50 negocios confían en Shop Builds"
+    "proof": "Más de 50 negocios confían en Shop Bulds"
   },
   "portfolio": {
     "badge": "Portafolio",
@@ -75,8 +75,8 @@
     "badge": "Testimonios",
     "title": "Resultados reales,\nde clientes reales.",
     "items": [
-      { "name": "Mariana Santos", "role": "Directora de Marketing", "company": "Lisboa, Portugal", "text": "Necesitaba una landing page para el lanzamiento de mi producto en 5 días. Shop Builds la entregó en 4. La tasa de conversión se duplicó respecto a la página anterior. Nunca más trabajaré con agencias tradicionales." },
-      { "name": "João Pinheiro", "role": "Fundador", "company": "Madrid, España", "text": "Probé tres agencias diferentes antes. O tardaban demasiado o el resultado era mediocre. Con Shop Builds, aprobamos a la primera versión. El proceso fue tan sencillo que parece que llevamos años trabajando juntos." },
+      { "name": "Mariana Santos", "role": "Directora de Marketing", "company": "Lisboa, Portugal", "text": "Necesitaba una landing page para el lanzamiento de mi producto en 5 días. Shop Bulds la entregó en 4. La tasa de conversión se duplicó respecto a la página anterior. Nunca más trabajaré con agencias tradicionales." },
+      { "name": "João Pinheiro", "role": "Fundador", "company": "Madrid, España", "text": "Probé tres agencias diferentes antes. O tardaban demasiado o el resultado era mediocre. Con Shop Bulds, aprobamos a la primera versión. El proceso fue tan sencillo que parece que llevamos años trabajando juntos." },
       { "name": "Ana Carvalho", "role": "Personal Trainer", "company": "Porto, Portugal", "text": "Gasté 1.200€ en una agencia y esperé 3 semanas por algo mediocre. Aquí pagué 99€, en 7 días tenía la página publicada, y ya he captado más de 23 nuevos clientes por el formulario. El ROI fue inmediato." },
       { "name": "David Ferreira", "role": "CEO", "company": "Lisboa, Portugal", "text": "El nivel de detalle en el diseño me sorprendió. No parecía una plantilla genérica — parecía que habían estudiado mi marca durante semanas. Las revisiones ilimitadas nos dieron libertad para afinar cada detalle." },
       { "name": "Sofia Rodrigues", "role": "Coach de Liderazgo", "company": "Braga, Portugal", "text": "Pedí ocho revisiones y nunca me sentí una molestia. Cada solicitud fue atendida con atención y rapidez. El resultado final quedó exactamente como lo imaginé — y mejor. Lo recomiendo sin dudarlo." }
@@ -109,7 +109,7 @@
   },
   "finalCta": {
     "title": "Tu próxima landing page\nestá a un clic.",
-    "desc": "Más de 50 negocios ya confían en Shop Builds. Únete a ellos.",
+    "desc": "Más de 50 negocios ya confían en Shop Bulds. Únete a ellos.",
     "cta": "Empezar Ahora",
     "sub": "Garantía de reembolso total. Sin contratos. Entrega en 7 días."
   },
@@ -118,7 +118,7 @@
     "links": { "title": "Enlaces", "portfolio": "Portafolio", "pricing": "Precios", "howItWorks": "Cómo Funciona" },
     "legal": { "title": "Legal", "privacy": "Política de Privacidad", "terms": "Términos de Servicio", "refund": "Política de Reembolso" },
     "contact": { "title": "Contacto", "name": "Lucas Breno Ferreira da Costa", "nif": "NIF: 315027371" },
-    "copyright": "Shop Builds. Todos los derechos reservados.",
+    "copyright": "Shop Bulds. Todos los derechos reservados.",
     "address": "Estrada de Mata Burros, Apt. 1, Quinta do Vale Bom, 2050-378"
   }
 }
