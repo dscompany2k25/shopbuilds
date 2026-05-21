@@ -95,13 +95,14 @@ export default function Pricing() {
                     <div className="absolute top-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent" />
                   )}
 
-                  {isPopular && (
-                    <div className="absolute -top-3 left-8">
+                  {/* Badge spacer — keeps all columns aligned */}
+                  <div className="h-7 flex items-center mb-4">
+                    {isPopular && (
                       <span className="btn-primary-bg text-[var(--color-primary-cta-text)] text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">
                         {t('popular')}
                       </span>
-                    </div>
-                  )}
+                    )}
+                  </div>
 
                   {/* Plan name */}
                   <p className="text-[#555] text-xs uppercase tracking-widest mb-4">{plan.name}</p>
