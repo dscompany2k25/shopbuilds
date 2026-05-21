@@ -2,108 +2,18 @@
 
 import { useTranslations } from 'next-intl';
 import { useEffect, useRef } from 'react';
+import Image from 'next/image';
 
-const portfolioVisuals = [
-  {
-    bg: '#0D0D0D',
-    accent: '#C8A97E',
-    pattern: 'lines',
-    tag: 'Restaurant',
-  },
-  {
-    bg: '#0A0A0A',
-    accent: '#E8E8E8',
-    pattern: 'dots',
-    tag: 'Fitness',
-  },
-  {
-    bg: '#0D0D0D',
-    accent: '#7EA3C8',
-    pattern: 'grid',
-    tag: 'Law',
-  },
-  {
-    bg: '#0A0A0A',
-    accent: '#C87EA3',
-    pattern: 'circles',
-    tag: 'Beauty',
-  },
-  {
-    bg: '#0D0D0D',
-    accent: '#7EC8A9',
-    pattern: 'dots',
-    tag: 'SaaS',
-  },
-  {
-    bg: '#0A0A0A',
-    accent: '#A9C87E',
-    pattern: 'lines',
-    tag: 'Real Estate',
-  },
+const S3 = 'https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2';
+
+const gridShots = [
+  { src: `${S3}/shot-1.webp`,  category: 'App & SaaS',  title: 'Daily Life App',    desc: 'Produto mobile com onboarding e checkout integrado' },
+  { src: `${S3}/shot-4.webp`,  category: 'SaaS',         title: 'SaaS Platform',     desc: 'Dashboard de gestão com planos e faturação automática' },
+  { src: `${S3}/shot-6.webp`,  category: 'E-commerce',   title: 'Luminé Skincare',   desc: 'Loja premium com páginas de produto de alta conversão' },
+  { src: `${S3}/shot-7.webp`,  category: 'Educação',     title: 'Online Courses',    desc: 'Plataforma de cursos com área de membros e vídeo' },
+  { src: `${S3}/shot-9.webp`,  category: 'Coaching',     title: 'Business Coach',    desc: 'Página de vendas para programa de alto valor' },
+  { src: `${S3}/shot-2.webp`,  category: 'Turismo',      title: 'Luxuria Travel',    desc: 'Site de luxo com reservas e galeria imersiva' },
 ];
-
-function PortfolioCard({
-  visual,
-  title,
-  category,
-  desc,
-  index,
-}: {
-  visual: (typeof portfolioVisuals)[number];
-  title: string;
-  category: string;
-  desc: string;
-  index: number;
-}) {
-  return (
-    <div
-      data-animate
-      className="group cursor-default border border-[#1a1a1a] hover:border-[#333] transition-colors duration-300"
-      style={{ transitionDelay: `${index * 60}ms` }}
-    >
-      {/* Visual mock */}
-      <div
-        className="relative h-52 overflow-hidden"
-        style={{ background: visual.bg }}
-      >
-        {/* Abstract page mock */}
-        <div className="absolute inset-4 flex flex-col gap-2 opacity-60">
-          <div className="h-2 rounded-sm" style={{ background: visual.accent, width: '40%', opacity: 0.9 }} />
-          <div className="h-1 rounded-sm bg-[#333] w-3/4" />
-          <div className="h-1 rounded-sm bg-[#333] w-1/2" />
-          <div className="mt-2 h-16 rounded-sm" style={{ background: `${visual.accent}18` }} />
-          <div className="flex gap-2 mt-auto">
-            <div className="h-6 w-20 rounded-sm" style={{ background: visual.accent, opacity: 0.8 }} />
-            <div className="h-6 w-16 rounded-sm border border-[#333]" />
-          </div>
-        </div>
-
-        {/* Hover overlay */}
-        <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-          <span className="text-xs text-white border border-white/30 px-3 py-1.5 tracking-widest uppercase">
-            View
-          </span>
-        </div>
-
-        {/* Category tag */}
-        <div className="absolute top-3 left-3">
-          <span
-            className="text-[10px] uppercase tracking-widest px-2 py-1 font-medium"
-            style={{ background: `${visual.accent}20`, color: visual.accent, border: `1px solid ${visual.accent}30` }}
-          >
-            {category}
-          </span>
-        </div>
-      </div>
-
-      {/* Info */}
-      <div className="p-4 border-t border-[#1a1a1a]">
-        <h3 className="font-display font-bold text-white text-base mb-1">{title}</h3>
-        <p className="text-[#555] text-xs leading-relaxed">{desc}</p>
-      </div>
-    </div>
-  );
-}
 
 export default function Portfolio() {
   const t = useTranslations('portfolio');
@@ -111,55 +21,85 @@ export default function Portfolio() {
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('in-view');
-          }
-        });
-      },
-      { threshold: 0.1, rootMargin: '0px 0px -60px 0px' }
+      (entries) => entries.forEach((e) => e.isIntersecting && e.target.classList.add('in-view')),
+      { threshold: 0.08, rootMargin: '0px 0px -60px 0px' }
     );
-    const els = sectionRef.current?.querySelectorAll('[data-animate]');
-    els?.forEach((el) => observer.observe(el));
+    sectionRef.current?.querySelectorAll('[data-animate]').forEach((el) => observer.observe(el));
     return () => observer.disconnect();
   }, []);
-
-  const items = t.raw('items') as Array<{ title: string; category: string; desc: string }>;
 
   return (
     <section id="portfolio" ref={sectionRef} className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
+
         {/* Header */}
-        <div className="mb-14">
-          <p data-animate className="text-xs text-[#555] uppercase tracking-widest mb-4">
+        <div className="text-center flex flex-col items-center gap-4 mb-16">
+          <p data-animate className="text-xs text-[#555] uppercase tracking-widest">
             {t('badge')}
           </p>
           <h2
             data-animate
-            className="font-display font-extrabold text-white leading-tight mb-4"
+            className="font-display font-extrabold text-[var(--text-1)] leading-tight"
             style={{ fontSize: 'clamp(2rem, 4vw, 3rem)' }}
           >
             {t('title')}
           </h2>
-          <p data-animate className="text-[#888] max-w-lg text-base">
+          <p data-animate className="text-[var(--text-2)] max-w-lg text-sm leading-relaxed">
             {t('subtitle')}
           </p>
+          <div data-animate>
+            <a
+              href="#pricing"
+              className="inline-flex items-center btn-primary-bg text-[var(--color-primary-cta-text)] font-semibold px-6 py-2.5 text-sm rounded-full hover:scale-[0.97] transition-transform duration-200 mt-1"
+            >
+              Ver Preços →
+            </a>
+          </div>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {items.map((item, i) => (
-            <PortfolioCard
+        {/* Grid — 2 colunas grandes + 1 destaque */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {gridShots.map((item, i) => (
+            <div
               key={i}
-              index={i}
-              visual={portfolioVisuals[i]}
-              title={item.title}
-              category={item.category}
-              desc={item.desc}
-            />
+              data-animate
+              className={`group cursor-default glass-card rounded-2xl overflow-hidden hover:scale-[1.015] transition-transform duration-300 ${
+                i === 0 ? 'md:col-span-2 lg:col-span-1' : ''
+              }`}
+              style={{ transitionDelay: `${i * 60}ms` }}
+            >
+              {/* Screenshot */}
+              <div className="relative overflow-hidden" style={{ aspectRatio: '16/10' }}>
+                <Image
+                  src={item.src}
+                  alt={item.title}
+                  width={800}
+                  height={500}
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+                {/* Hover overlay */}
+                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <span className="text-xs text-white glass-card rounded-full px-4 py-1.5 tracking-widest uppercase">
+                    Ver Projecto
+                  </span>
+                </div>
+                {/* Category tag */}
+                <div className="absolute top-3 left-3">
+                  <span className="glass-card text-[10px] uppercase tracking-widest px-3 py-1 font-medium rounded-full text-[var(--text-1)]">
+                    {item.category}
+                  </span>
+                </div>
+              </div>
+              {/* Info */}
+              <div className="px-5 py-4 border-t border-white/[0.06]">
+                <h3 className="font-display font-bold text-[var(--text-1)] text-sm mb-1">{item.title}</h3>
+                <p className="text-[#555] text-xs leading-relaxed">{item.desc}</p>
+              </div>
+            </div>
           ))}
         </div>
+
       </div>
     </section>
   );

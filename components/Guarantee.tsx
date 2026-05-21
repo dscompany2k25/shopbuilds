@@ -33,17 +33,16 @@ export default function Guarantee() {
   const items = t.raw('items') as Array<{ title: string; desc: string }>;
 
   return (
-    <section ref={sectionRef} className="py-24 px-6 border-t border-[#111]">
+    <section ref={sectionRef} className="py-24 px-6 border-t border-white/[0.04]">
       <div className="max-w-6xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left */}
           <div>
             <p data-animate className="text-xs text-[#555] uppercase tracking-widest mb-4">
               {t('badge')}
             </p>
             <h2
               data-animate
-              className="font-display font-extrabold text-white leading-tight mb-6 whitespace-pre-line"
+              className="font-display font-extrabold text-[var(--text-1)] leading-tight mb-6 whitespace-pre-line"
               style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)' }}
             >
               {t('title')}
@@ -51,28 +50,26 @@ export default function Guarantee() {
             <p data-animate className="text-[#666] leading-relaxed text-base">
               {t('desc')}
             </p>
-
             <div data-animate className="mt-8">
               <a
                 href="#pricing"
-                className="inline-flex items-center gap-2 bg-white text-black font-semibold px-6 py-3 text-sm hover:bg-[#e8e8e8] transition-colors duration-200"
+                className="inline-flex items-center gap-2 btn-primary-bg text-[var(--color-primary-cta-text)] font-semibold px-6 py-3 text-sm rounded-full hover:scale-[0.97] transition-transform duration-200"
               >
                 Ver Preços →
               </a>
             </div>
           </div>
 
-          {/* Right: 4 pillars */}
           <div className="grid grid-cols-2 gap-4">
             {items.map((item, i) => (
               <div
                 key={i}
                 data-animate
-                className="border border-[#1a1a1a] p-6 hover:border-[#2a2a2a] transition-colors duration-300"
+                className="glass-card rounded-2xl p-6 hover:scale-[1.02] transition-transform duration-300"
                 style={{ transitionDelay: `${i * 60}ms` }}
               >
                 <div className="text-[#555] mb-4">{(() => { const Icon = iconComponents[i]; return <Icon />; })()}</div>
-                <h3 className="font-display font-bold text-white text-sm mb-2">{item.title}</h3>
+                <h3 className="font-display font-bold text-[var(--text-1)] text-sm mb-2">{item.title}</h3>
                 <p className="text-[#555] text-xs leading-relaxed">{item.desc}</p>
               </div>
             ))}

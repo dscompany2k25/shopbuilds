@@ -3,11 +3,11 @@
 import { useTranslations } from 'next-intl';
 import { useEffect, useRef } from 'react';
 
-function StarRating() {
+function StarRating({ dark = false }: { dark?: boolean }) {
   return (
     <div className="flex gap-0.5">
       {Array.from({ length: 5 }).map((_, i) => (
-        <svg key={i} width="12" height="12" viewBox="0 0 24 24" fill="white">
+        <svg key={i} width="12" height="12" viewBox="0 0 24 24" fill={dark ? '#0a0a0a' : '#888'}>
           <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
         </svg>
       ))}
@@ -36,16 +36,17 @@ export default function Testimonials() {
   }>;
 
   return (
-    <section ref={sectionRef} className="py-24 px-6 border-t border-[#111]">
+    <section ref={sectionRef} className="py-24 px-6 bg-[#f7f7f7]">
       <div className="max-w-6xl mx-auto">
+
         {/* Header */}
         <div className="mb-14">
-          <p data-animate className="text-xs text-[#555] uppercase tracking-widest mb-4">
+          <p data-animate className="text-xs text-[#aaa] uppercase tracking-widest mb-4">
             {t('badge')}
           </p>
           <h2
             data-animate
-            className="font-display font-extrabold text-white leading-tight whitespace-pre-line"
+            className="font-display font-extrabold text-[#0a0a0a] leading-tight whitespace-pre-line"
             style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)' }}
           >
             {t('title')}
@@ -53,30 +54,28 @@ export default function Testimonials() {
         </div>
 
         {/* Featured testimonial */}
-        <div data-animate className="border border-[#1a1a1a] p-8 mb-4 relative overflow-hidden">
+        <div data-animate className="white-card rounded-3xl p-8 mb-4 relative overflow-hidden">
           <div
             className="absolute top-0 right-0 w-64 h-64 pointer-events-none"
-            style={{
-              background: 'radial-gradient(circle at 100% 0%, rgba(255,255,255,0.02) 0%, transparent 60%)',
-            }}
+            style={{ background: 'radial-gradient(circle at 100% 0%, rgba(0,0,0,0.02) 0%, transparent 60%)' }}
           />
-          <p className="font-display font-bold text-white text-xl md:text-2xl leading-relaxed mb-6 relative z-10">
+          <StarRating dark />
+          <p className="font-display font-bold text-[#0a0a0a] text-xl md:text-2xl leading-relaxed mt-5 mb-6 relative z-10">
             &ldquo;{items[2].text}&rdquo;
           </p>
           <div className="flex items-center gap-4 relative z-10">
-            <div className="w-10 h-10 bg-[#1a1a1a] border border-[#2a2a2a] flex items-center justify-center flex-shrink-0">
+            <div
+              className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 bg-[#0a0a0a]"
+            >
               <span className="font-display font-bold text-white text-sm">
                 {items[2].name.charAt(0)}
               </span>
             </div>
             <div>
-              <p className="text-white font-medium text-sm">{items[2].name}</p>
-              <p className="text-[#555] text-xs">
+              <p className="text-[#0a0a0a] font-semibold text-sm">{items[2].name}</p>
+              <p className="text-[#999] text-xs">
                 {items[2].role} · {items[2].company}
               </p>
-            </div>
-            <div className="ml-auto">
-              <StarRating />
             </div>
           </div>
         </div>
@@ -87,22 +86,22 @@ export default function Testimonials() {
             <div
               key={i}
               data-animate
-              className="border border-[#1a1a1a] p-6 hover:border-[#2a2a2a] transition-colors duration-300"
+              className="white-card rounded-2xl p-6 hover:shadow-md transition-shadow duration-300"
               style={{ transitionDelay: `${i * 60}ms` }}
             >
-              <StarRating />
-              <p className="text-[#999] text-sm leading-relaxed mt-4 mb-6">
+              <StarRating dark />
+              <p className="text-[#555] text-sm leading-relaxed mt-4 mb-6">
                 &ldquo;{item.text}&rdquo;
               </p>
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 bg-[#1a1a1a] border border-[#2a2a2a] flex items-center justify-center flex-shrink-0">
-                  <span className="font-display font-bold text-white text-xs">
+                <div className="w-8 h-8 rounded-full bg-[#f0f0f0] border border-[#e8e8e8] flex items-center justify-center flex-shrink-0">
+                  <span className="font-display font-bold text-[#0a0a0a] text-xs">
                     {item.name.charAt(0)}
                   </span>
                 </div>
                 <div>
-                  <p className="text-white font-medium text-sm">{item.name}</p>
-                  <p className="text-[#444] text-xs">
+                  <p className="text-[#0a0a0a] font-semibold text-sm">{item.name}</p>
+                  <p className="text-[#aaa] text-xs">
                     {item.role} · {item.company}
                   </p>
                 </div>
@@ -110,6 +109,7 @@ export default function Testimonials() {
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );

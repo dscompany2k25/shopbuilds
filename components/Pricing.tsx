@@ -57,7 +57,7 @@ export default function Pricing() {
   };
 
   return (
-    <section id="pricing" ref={sectionRef} className="py-24 px-6 border-t border-[#111]">
+    <section id="pricing" ref={sectionRef} className="py-24 px-6 border-t border-white/[0.04]">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
@@ -66,7 +66,7 @@ export default function Pricing() {
           </p>
           <h2
             data-animate
-            className="font-display font-extrabold text-white leading-tight mb-4 whitespace-pre-line"
+            className="font-display font-extrabold text-[var(--text-1)] leading-tight mb-4 whitespace-pre-line"
             style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)' }}
           >
             {t('title')}
@@ -76,98 +76,98 @@ export default function Pricing() {
           </p>
         </div>
 
-        {/* Plans grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-[#1a1a1a]">
-          {plans.map((plan, i) => {
-            const planId = PLAN_IDS[i];
-            const isPopular = i === 1;
-            const isLoading = loading === planId;
+        {/* Plans */}
+        <div className="glass-card rounded-3xl overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/[0.06]">
+            {plans.map((plan, i) => {
+              const planId = PLAN_IDS[i];
+              const isPopular = i === 1;
+              const isLoading = loading === planId;
 
-            return (
-              <div
-                key={i}
-                data-animate
-                className={`relative flex flex-col p-8 ${
-                  i < 2 ? 'border-b md:border-b-0 md:border-r border-[#1a1a1a]' : ''
-                } ${isPopular ? 'bg-[#0a0a0a]' : ''}`}
-                style={{ transitionDelay: `${i * 80}ms` }}
-              >
-                {isPopular && (
-                  <div className="absolute -top-px left-0 right-0 h-px bg-white" />
-                )}
+              return (
+                <div
+                  key={i}
+                  data-animate
+                  className={`relative flex flex-col p-8 ${isPopular ? 'bg-white/[0.03]' : ''}`}
+                  style={{ transitionDelay: `${i * 80}ms` }}
+                >
+                  {isPopular && (
+                    <div className="absolute top-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent" />
+                  )}
 
-                {isPopular && (
-                  <div className="absolute -top-3 left-8">
-                    <span className="bg-white text-black text-[10px] font-bold uppercase tracking-widest px-3 py-1">
-                      {t('popular')}
+                  {isPopular && (
+                    <div className="absolute -top-3 left-8">
+                      <span className="btn-primary-bg text-[var(--color-primary-cta-text)] text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">
+                        {t('popular')}
+                      </span>
+                    </div>
+                  )}
+
+                  {/* Plan name */}
+                  <p className="text-[#555] text-xs uppercase tracking-widest mb-4">{plan.name}</p>
+
+                  {/* Price */}
+                  <div className="flex items-baseline gap-1 mb-3">
+                    <span className="font-display font-extrabold text-[var(--text-1)]" style={{ fontSize: '3.5rem', lineHeight: 1 }}>
+                      {plan.price}€
                     </span>
                   </div>
-                )}
 
-                {/* Plan name */}
-                <p className="text-[#555] text-xs uppercase tracking-widest mb-4">{plan.name}</p>
+                  <p className="text-[#666] text-sm leading-relaxed mb-8">{plan.desc}</p>
 
-                {/* Price */}
-                <div className="flex items-baseline gap-1 mb-3">
-                  <span className="font-display font-extrabold text-white" style={{ fontSize: '3.5rem', lineHeight: 1 }}>
-                    {plan.price}€
-                  </span>
+                  {/* CTA */}
+                  <button
+                    onClick={() => handleCheckout(planId)}
+                    disabled={isLoading}
+                    className={`w-full py-3 text-sm font-semibold rounded-full transition-all duration-200 mb-8 ${
+                      isPopular
+                        ? 'btn-primary-bg text-[var(--color-primary-cta-text)] hover:scale-[0.98]'
+                        : 'btn-secondary-bg text-[var(--color-secondary-cta-text)] hover:scale-[0.98]'
+                    } ${isLoading ? 'opacity-60 cursor-not-allowed' : ''}`}
+                  >
+                    {isLoading ? '...' : plan.cta}
+                  </button>
+
+                  {/* Divider */}
+                  <div className="h-px bg-white/[0.06] mb-6" />
+
+                  {/* Features */}
+                  <ul className="space-y-3 flex-1">
+                    {plan.features.map((feature, j) => (
+                      <li key={j} className="flex items-start gap-3 text-sm">
+                        <svg
+                          className="flex-shrink-0 mt-0.5"
+                          width="14"
+                          height="14"
+                          fill="none"
+                          stroke={isPopular ? '#fff' : '#555'}
+                          strokeWidth="2"
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                        <span className={isPopular ? 'text-[#ccc]' : 'text-[#666]'}>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-
-                <p className="text-[#666] text-sm leading-relaxed mb-8">{plan.desc}</p>
-
-                {/* CTA */}
-                <button
-                  onClick={() => handleCheckout(planId)}
-                  disabled={isLoading}
-                  className={`w-full py-3 text-sm font-semibold transition-colors duration-200 mb-8 ${
-                    isPopular
-                      ? 'bg-white text-black hover:bg-[#e8e8e8]'
-                      : 'border border-[#2a2a2a] text-[#888] hover:text-white hover:border-[#444]'
-                  } ${isLoading ? 'opacity-60 cursor-not-allowed' : ''}`}
-                >
-                  {isLoading ? '...' : plan.cta}
-                </button>
-
-                {/* Divider */}
-                <div className="h-px bg-[#1a1a1a] mb-6" />
-
-                {/* Features */}
-                <ul className="space-y-3 flex-1">
-                  {plan.features.map((feature, j) => (
-                    <li key={j} className="flex items-start gap-3 text-sm">
-                      <svg
-                        className="flex-shrink-0 mt-0.5"
-                        width="14"
-                        height="14"
-                        fill="none"
-                        stroke={isPopular ? '#fff' : '#555'}
-                        strokeWidth="2"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                      <span className={isPopular ? 'text-[#ccc]' : 'text-[#666]'}>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
 
         {/* Enterprise */}
         <div
           data-animate
-          className="mt-4 border border-[#1a1a1a] p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6"
+          className="mt-4 glass-card rounded-2xl p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6"
         >
           <div>
-            <h3 className="font-display font-bold text-white text-lg mb-2">{enterprise.title}</h3>
+            <h3 className="font-display font-bold text-[var(--text-1)] text-lg mb-2">{enterprise.title}</h3>
             <p className="text-[#666] text-sm max-w-xl">{enterprise.desc}</p>
           </div>
           <a
             href={`mailto:${enterprise.email}?subject=Projecto%20Enterprise%20-%20Shop%20Builds`}
-            className="flex-shrink-0 border border-[#2a2a2a] text-[#888] hover:text-white hover:border-[#444] px-6 py-3 text-sm font-medium transition-colors duration-200 whitespace-nowrap"
+            className="flex-shrink-0 btn-secondary-bg text-[var(--color-secondary-cta-text)] hover:scale-[0.97] px-6 py-3 text-sm font-medium rounded-full transition-transform duration-200 whitespace-nowrap"
           >
             {enterprise.cta} →
           </a>

@@ -6,13 +6,23 @@
 @tailwind utilities;
 
 :root {
-  --bg: #000000;
-  --bg-1: #0D0D0D;
-  --bg-2: #1A1A1A;
-  --text-1: #FFFFFF;
+  --bg: #0a0a0a;
+  --bg-1: #111111;
+  --bg-2: #161616;
+  --text-1: #f0f0f0;
   --text-2: #888888;
   --text-3: #444444;
   --border: #222222;
+
+  --color-background: #0a0a0a;
+  --color-card: #161616;
+  --color-foreground: #f0f0f0;
+  --color-primary-cta: #ffffff;
+  --color-primary-cta-text: #0a0a0a;
+  --color-secondary-cta: #1e1e1e;
+  --color-secondary-cta-text: #e0e0e0;
+  --color-accent: #d0d0d0;
+  --color-background-accent: #9a9a9a;
 }
 
 * {
@@ -35,13 +45,77 @@ body {
   font-family: 'Bricolage Grotesque', sans-serif;
 }
 
-/* Scroll bar */
+/* Scrollbar */
 ::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: #000; }
-::-webkit-scrollbar-thumb { background: #333; border-radius: 2px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 2px; }
 
 /* Selection */
 ::selection { background: #fff; color: #000; }
+
+/* Glassmorphism card */
+.glass-card {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: linear-gradient(
+    to bottom right,
+    color-mix(in srgb, var(--color-card) 85%, transparent),
+    color-mix(in srgb, var(--color-card) 50%, transparent)
+  );
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.12), inset 0 1px 0 0 rgb(255 255 255 / 0.05);
+  border: 1px solid color-mix(in srgb, var(--color-foreground) 8%, transparent);
+}
+
+/* Primary gradient button */
+.btn-primary-bg {
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--color-primary-cta) 80%, var(--color-foreground)) 0%,
+    var(--color-primary-cta) 25%,
+    color-mix(in srgb, var(--color-primary-cta) 92%, var(--color-background)) 50%,
+    var(--color-primary-cta) 75%,
+    color-mix(in srgb, var(--color-primary-cta) 85%, var(--color-foreground)) 100%
+  );
+  box-shadow: inset 0 1px 0 0 color-mix(in srgb, var(--color-foreground) 30%, transparent),
+    0 3px 10px -2px rgb(0 0 0 / 0.4);
+}
+
+/* Secondary glass button */
+.btn-secondary-bg {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background: linear-gradient(
+    to bottom right,
+    color-mix(in srgb, var(--color-secondary-cta) 80%, transparent),
+    var(--color-secondary-cta)
+  );
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  border: 1px solid color-mix(in srgb, var(--color-foreground) 10%, transparent);
+}
+
+/* White section card */
+.white-card {
+  background: #ffffff;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.05), 0 4px 16px 0 rgb(0 0 0 / 0.04);
+  border: 1px solid #efefef;
+}
+
+/* Vertical marquee fade mask */
+.mask-fade-y {
+  mask-image: linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%);
+}
+
+/* Horizontal marquee fade mask */
+.mask-fade-x {
+  mask-image: linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);
+}
+
+@keyframes marqueeHorizontalReverse {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
 
 /* Animate on scroll */
 [data-animate] {

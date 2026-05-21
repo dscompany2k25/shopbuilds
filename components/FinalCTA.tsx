@@ -17,8 +17,8 @@ export default function FinalCTA() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-32 px-6 border-t border-[#111] relative overflow-hidden">
-      {/* Background effect */}
+    <section ref={sectionRef} className="py-32 px-6 border-t border-white/[0.04] relative overflow-hidden">
+      {/* Background glow */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -29,7 +29,7 @@ export default function FinalCTA() {
       <div className="max-w-3xl mx-auto text-center relative z-10">
         <h2
           data-animate
-          className="font-display font-extrabold text-white leading-tight mb-6 whitespace-pre-line"
+          className="font-display font-extrabold text-[var(--text-1)] leading-tight mb-6 whitespace-pre-line"
           style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)' }}
         >
           {t('title')}
@@ -40,7 +40,7 @@ export default function FinalCTA() {
         <div data-animate className="flex flex-col sm:flex-row items-center justify-center gap-3">
           <a
             href="#pricing"
-            className="bg-white text-black font-bold px-10 py-4 text-sm hover:bg-[#e8e8e8] transition-colors duration-200 w-full sm:w-auto text-center"
+            className="btn-primary-bg text-[var(--color-primary-cta-text)] font-bold px-10 py-4 text-sm rounded-full hover:scale-[0.97] transition-transform duration-200 w-full sm:w-auto text-center"
           >
             {t('cta')}
           </a>

@@ -19,47 +19,48 @@ export default function HowItWorks() {
   const steps = t.raw('steps') as Array<{ num: string; title: string; desc: string }>;
 
   return (
-    <section id="howItWorks" ref={sectionRef} className="py-24 px-6 border-t border-[#111]">
+    <section id="howItWorks" ref={sectionRef} className="py-24 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
+
           {/* Left */}
-          <div className="sticky top-24">
-            <p data-animate className="text-xs text-[#555] uppercase tracking-widest mb-4">
+          <div className="sticky top-28">
+            <p data-animate className="text-xs text-[#aaa] uppercase tracking-widest mb-4">
               {t('badge')}
             </p>
             <h2
               data-animate
-              className="font-display font-extrabold text-white leading-tight"
+              className="font-display font-extrabold text-[#0a0a0a] leading-tight"
               style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', whiteSpace: 'pre-line' }}
             >
               {t('title')}
             </h2>
 
-            {/* Visual timeline mock */}
+            {/* Visual mock */}
             <div data-animate className="mt-12 hidden lg:block">
-              <div className="border border-[#1a1a1a] p-6 space-y-3">
+              <div className="white-card rounded-2xl p-6 space-y-3">
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-white flex items-center justify-center">
-                    <span className="text-black text-xs font-bold font-display">SB</span>
+                  <div className="w-8 h-8 bg-[#0a0a0a] rounded-full flex items-center justify-center">
+                    <span className="text-white text-xs font-bold font-display">SB</span>
                   </div>
                   <div>
-                    <div className="h-2 w-32 bg-[#1a1a1a] rounded-sm" />
-                    <div className="h-1.5 w-20 bg-[#141414] rounded-sm mt-1.5" />
+                    <div className="h-2 w-32 bg-[#f0f0f0] rounded-full" />
+                    <div className="h-1.5 w-20 bg-[#f5f5f5] rounded-full mt-1.5" />
                   </div>
                 </div>
-                <div className="h-px bg-[#1a1a1a]" />
+                <div className="h-px bg-[#f0f0f0]" />
                 <div className="space-y-2">
                   {[70, 50, 80, 45].map((w, i) => (
-                    <div key={i} className="h-1.5 rounded-sm bg-[#1a1a1a]" style={{ width: `${w}%` }} />
+                    <div key={i} className="h-1.5 rounded-full bg-[#f0f0f0]" style={{ width: `${w}%` }} />
                   ))}
                 </div>
-                <div className="h-px bg-[#1a1a1a]" />
+                <div className="h-px bg-[#f0f0f0]" />
                 <div className="flex gap-2">
-                  <div className="h-6 flex-1 bg-white opacity-90 rounded-sm" />
-                  <div className="h-6 flex-1 border border-[#2a2a2a] rounded-sm" />
+                  <div className="h-7 flex-1 bg-[#0a0a0a] rounded-full" />
+                  <div className="h-7 flex-1 border border-[#e8e8e8] rounded-full" />
                 </div>
               </div>
-              <p className="text-[#444] text-xs mt-3 text-center tracking-wide uppercase">
+              <p className="text-[#bbb] text-xs mt-3 text-center tracking-wide uppercase">
                 Preview — 7 days
               </p>
             </div>
@@ -71,23 +72,24 @@ export default function HowItWorks() {
               <div
                 key={i}
                 data-animate
-                className="flex gap-6 py-8 border-b border-[#111] last:border-0"
+                className="flex gap-6 py-8 border-b border-[#f0f0f0] last:border-0"
                 style={{ transitionDelay: `${i * 80}ms` }}
               >
                 <div className="flex-shrink-0 pt-1">
-                  <span className="font-display font-bold text-[#2a2a2a] text-3xl leading-none select-none">
+                  <span className="font-display font-bold text-[#e0e0e0] text-3xl leading-none select-none">
                     {step.num}
                   </span>
                 </div>
                 <div>
-                  <h3 className="font-display font-bold text-white text-lg mb-2">
+                  <h3 className="font-display font-bold text-[#0a0a0a] text-lg mb-2">
                     {step.title}
                   </h3>
-                  <p className="text-[#666] text-sm leading-relaxed">{step.desc}</p>
+                  <p className="text-[#777] text-sm leading-relaxed">{step.desc}</p>
                 </div>
               </div>
             ))}
           </div>
+
         </div>
       </div>
     </section>

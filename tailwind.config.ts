@@ -13,18 +13,21 @@ const config: Config = {
         body: ['DM Sans', 'sans-serif'],
       },
       colors: {
-        bg: '#000000',
-        'bg-1': '#0D0D0D',
-        'bg-2': '#1A1A1A',
-        'text-1': '#FFFFFF',
-        'text-2': '#888888',
-        'text-3': '#444444',
-        border: '#222222',
+        bg: 'var(--bg)',
+        'bg-1': 'var(--bg-1)',
+        'bg-2': 'var(--bg-2)',
+        'text-1': 'var(--text-1)',
+        'text-2': 'var(--text-2)',
+        'text-3': 'var(--text-3)',
+        border: 'var(--border)',
       },
       animation: {
         'fade-up': 'fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards',
         'fade-in': 'fadeIn 0.5s ease forwards',
         marquee: 'marquee 30s linear infinite',
+        'marquee-vertical': 'marqueeVertical 28s linear infinite',
+        'marquee-vertical-reverse': 'marqueeVerticalReverse 32s linear infinite',
+        'marquee-horizontal': 'marqueeHorizontal 35s linear infinite',
       },
       keyframes: {
         fadeUp: {
@@ -38,6 +41,22 @@ const config: Config = {
         marquee: {
           '0%': { transform: 'translateX(0%)' },
           '100%': { transform: 'translateX(-50%)' },
+        },
+        marqueeVertical: {
+          '0%': { transform: 'translateY(0)' },
+          '100%': { transform: 'translateY(-50%)' },
+        },
+        marqueeVerticalReverse: {
+          '0%': { transform: 'translateY(-50%)' },
+          '100%': { transform: 'translateY(0)' },
+        },
+        marqueeHorizontal: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+        marqueeHorizontalReverse: {
+          '0%': { transform: 'translateX(-50%)' },
+          '100%': { transform: 'translateX(0)' },
         },
       },
     },

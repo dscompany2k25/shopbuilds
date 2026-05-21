@@ -10,6 +10,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'webild-components-2.vercel.app',
       },
+      {
+        protocol: 'https',
+        hostname: 'webuild-dev.s3.eu-north-1.amazonaws.com',
+      },
     ],
   },
 };
