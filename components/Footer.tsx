@@ -27,6 +27,7 @@ const copy: Record<string, {
     legal: {
       title: 'Legal',
       items: [
+        { label: 'Atendimento ao Cliente', href: '/pt/support' },
         { label: 'Política de Privacidade', href: '/pt/privacy' },
         { label: 'Termos de Serviço', href: '/pt/terms' },
         { label: 'Política de Reembolso', href: '/pt/refund' },
@@ -54,6 +55,7 @@ const copy: Record<string, {
     legal: {
       title: 'Legal',
       items: [
+        { label: 'Atención al Cliente', href: '/es/support' },
         { label: 'Política de Privacidad', href: '/es/privacy' },
         { label: 'Términos de Servicio', href: '/es/terms' },
         { label: 'Política de Reembolso', href: '/es/refund' },
@@ -81,6 +83,7 @@ const copy: Record<string, {
     legal: {
       title: 'Legal',
       items: [
+        { label: 'Customer Support', href: '/en/support' },
         { label: 'Privacy Policy', href: '/en/privacy' },
         { label: 'Terms of Service', href: '/en/terms' },
         { label: 'Refund Policy', href: '/en/refund' },
