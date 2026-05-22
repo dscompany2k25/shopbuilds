@@ -1,10 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import Stripe from 'stripe';
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: '2024-06-20',
-});
-
 const PLANS: Record<string, { amount: number; name: Record<string, string>; description: Record<string, string> }> = {
   starter: {
     amount: 4900,
@@ -36,6 +32,18 @@ const PLANS: Record<string, { amount: number; name: Record<string, string>; desc
 };
 
 export async function POST(req: NextRequest) {
+  // Initialise Stripe inside handler so env vars are always available
+  const secretKey = process.env.STRIPE_SECRET_KEY;
+
+  if (!secretKey) {
+    console.error('Checkout error: STRIPE_SECRET_KEY is not set');
+    return NextResponse.json({ error: 'Payment service not configured' }, { status: 500 });
+  }
+
+  const stripe = new Stripe(secretKey, {
+    apiVersion: '2024-06-20',
+  });
+
   try {
     const { planId, locale = 'pt' } = await req.json();
 
@@ -45,7 +53,7 @@ export async function POST(req: NextRequest) {
     }
 
     const lang = (locale as string) in plan.name ? (locale as string) : 'pt';
-    const origin = req.headers.get('origin') || 'https://shopbulds.com';
+    const origin = req.headers.get('origin') || 'https://www.shopbulds.com';
 
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
@@ -56,7 +64,6 @@ export async function POST(req: NextRequest) {
             product_data: {
               name: plan.name[lang],
               description: plan.description[lang],
-              metadata: { plan: planId },
             },
             unit_amount: plan.amount,
           },
@@ -67,10 +74,7 @@ export async function POST(req: NextRequest) {
       success_url: `${origin}/${locale}/success?session_id={CHECKOUT_SESSION_ID}&plan=${planId}`,
       cancel_url: `${origin}/${locale}#pricing`,
       billing_address_collection: 'required',
-      metadata: {
-        planId,
-        locale,
-      },
+      metadata: { planId, locale },
       custom_text: {
         submit: {
           message:
@@ -85,8 +89,12 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({ url: session.url });
   } catch (err: unknown) {
-    const message = err instanceof Error ? err.message : 'Unknown error';
-    console.error('Checkout error:', message);
+    const stripeErr = err as Stripe.StripeRawError;
+    const message   = stripeErr?.message || (err instanceof Error ? err.message : 'Unknown error');
+    const type      = stripeErr?.type || 'unknown';
+    const code      = stripeErr?.statusCode || 500;
+
+    console.error(`Checkout error [${type}] [${code}]: ${message}`);
     return NextResponse.json({ error: message }, { status: 500 });
   }
 }
