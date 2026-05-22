@@ -37,7 +37,8 @@ const SUBMIT_MSG: Record<string, string> = {
 };
 
 export async function POST(req: NextRequest) {
-  const secretKey = process.env.STRIPE_SECRET_KEY;
+  // Strip BOM (U+FEFF) and whitespace injected by PowerShell into env vars
+  const secretKey = (process.env.STRIPE_SECRET_KEY || '').replace(/﻿/g, '').trim();
 
   if (!secretKey) {
     console.error('STRIPE_SECRET_KEY not set');
