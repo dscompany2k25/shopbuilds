@@ -42,6 +42,8 @@ export async function POST(req: NextRequest) {
 
   const stripe = new Stripe(secretKey, {
     apiVersion: '2024-06-20',
+    maxNetworkRetries: 0,
+    timeout: 8000,
   });
 
   try {
