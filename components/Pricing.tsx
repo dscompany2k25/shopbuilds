@@ -2,12 +2,14 @@
 
 import { useTranslations, useLocale } from 'next-intl';
 import { useEffect, useRef, useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 const PLAN_IDS = ['starter', 'growth', 'pro'] as const;
 
 export default function Pricing() {
   const t = useTranslations('pricing');
   const locale = useLocale();
+  const router = useRouter();
   const sectionRef = useRef<HTMLDivElement>(null);
   const [loading, setLoading] = useState<string | null>(null);
 
@@ -35,25 +37,9 @@ export default function Pricing() {
     email: string;
   };
 
-  const handleCheckout = async (planId: string) => {
+  const handleCheckout = (planId: string) => {
     setLoading(planId);
-    try {
-      const res = await fetch('/api/checkout', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ planId, locale }),
-      });
-      const data = await res.json();
-      if (data.url) {
-        window.location.href = data.url;
-      } else {
-        alert('Erro ao iniciar pagamento. Tente novamente.');
-      }
-    } catch {
-      alert('Erro de ligação. Tente novamente.');
-    } finally {
-      setLoading(null);
-    }
+    router.push(`/${locale}/checkout?plan=${planId}`);
   };
 
   return (
